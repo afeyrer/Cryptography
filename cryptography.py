@@ -17,8 +17,13 @@ while z==0:
         y=0
         mes=list(input("Message: "))
         key=list(input("Key: "))
-        while x<len(mes):
-            mes[y]= associations[associations.find(mes[y])+associations.find(key[y])]
+        while y<len(mes):
+            mes[y]=associations.find(mes[y])+associations.find(key[y])
+            if mes[y]>84:
+                mes[y]=mes[y]-85
+            mes[y]=associations[mes[y]]
+        for x in mes: 
+            print(x, end="")
     if opt=="d":
         y=0
         mes=input("Message: ")
