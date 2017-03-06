@@ -14,10 +14,15 @@ z=0
 while z==0:
     opt=input("Enter e to encrypt, d to decrypt, or q to quit: ")
     if opt=="e":
+        y=0
+        mes=list(input("Message: "))
+        key=list(input("Key: "))
+        while x<len(mes):
+            mes[y]= associations[associations.find(mes[y])+associations.find(key[y])]
+    if opt=="d":
+        y=0
         mes=input("Message: ")
         key=input("Key: ")
-    if opt=="d":
-        print(opt)
     if opt=="q":
         print("Goodbye!")
         z=1
