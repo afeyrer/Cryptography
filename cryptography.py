@@ -24,7 +24,7 @@ while z==0:
             y=y+1
         for x in mes: 
             print(x, end="")
-            print(" ")
+        print(" ")
     if opt=="d":
         y=0
         mes=input("Message: ")
