@@ -16,12 +16,16 @@ while z==0:
     opt=input("Enter e to encrypt, d to decrypt, or q to quit: ")
     if opt=="e":
         y=0
+        b=0
         mes=list(input("Message: "))
         key=list(input("Key: "))
+        if b>=(len(key)-1):
+            b=b-(len(key))
         while y<len(mes):
-            k=associations.find(mes[y])+associations.find(key[y])
+            k=associations.find(mes[y])+associations.find(key[b])
             mes[y]=a[k]
             y=y+1
+            b=b+1
         for x in mes: 
             print(x, end="")
         print(" ")
