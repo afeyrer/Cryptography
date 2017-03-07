@@ -19,13 +19,14 @@ while z==0:
         b=0
         mes=list(input("Message: "))
         key=list(input("Key: "))
-        if b>=(len(key)-1):
-            b=b-(len(key))
+       
         while y<len(mes):
             k=associations.find(mes[y])+associations.find(key[b])
             mes[y]=a[k]
             y=y+1
             b=b+1
+            if b>=(len(key)-1):
+                b=b-(len(key))
         for x in mes: 
             print(x, end="")
         print(" ")
