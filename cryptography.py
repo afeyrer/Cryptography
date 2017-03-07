@@ -22,6 +22,8 @@ while z==0:
        
         while y<len(mes):
             k=associations.find(mes[y])+associations.find(key[b])
+            if k>=(len(a)-1):
+                k=k-(len(a))
             mes[y]=a[k]
             y=y+1
             b=b+1
