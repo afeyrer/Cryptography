@@ -11,7 +11,7 @@ See the detailed requirements at https://github.com/HHS-IntroProgramming/Cryptog
 """
 associations = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .,:;'\"/\\<>(){}[]-=_+?!"
 z=0
-a=list[associations]
+a=list(associations)
 while z==0:
     opt=input("Enter e to encrypt, d to decrypt, or q to quit: ")
     if opt=="e":
